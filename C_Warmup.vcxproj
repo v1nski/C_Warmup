@@ -139,7 +139,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="C_Warmup.cpp" />
+    <ClCompile Include="addition.cpp" />
+    <ClCompile Include="prime.cpp" />
+    <ClCompile Include="faculty.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

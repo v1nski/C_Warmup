@@ -15,7 +15,13 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C_Warmup.cpp">
+    <ClCompile Include="prime.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="addition.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="faculty.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
