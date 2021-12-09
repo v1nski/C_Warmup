@@ -45,7 +45,14 @@ void prime(double limit) {
 
 
 
-
+long long faculty(int in) {
+	if (in == 1) {
+		return 1;
+	}
+	else {
+		return in * faculty(in-1);
+	}
+}
 
 
 
@@ -61,5 +68,9 @@ int main()
 
 	int limit = 100;
 	prime(limit);
+
+
+	int n = 4;
+	printf("%d\n", faculty(n));
 }
 
