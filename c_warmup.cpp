@@ -37,7 +37,7 @@ bool single_prime(int n) {
 void prime(double limit) {
 	for (int i = 1; i <= limit; i++) {
 		if (single_prime(i)) {
-			printf("Prime: %d\n",i);
+			printf("  -  %d\n",i);
 		}
 	}
 }
@@ -67,10 +67,11 @@ int main()
 
 
 	int limit = 100;
+	printf("\n\nPrime numbers below %d:\n", limit);
 	prime(limit);
 
 
 	int n = 4;
-	printf("%d\n", faculty(n));
+	printf("\n\n%d! = %d\n", n, faculty(n));
 }
 
