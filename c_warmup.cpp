@@ -72,6 +72,6 @@ int main()
 
 
 	int n = 4;
-	printf("\n\n%d! = %d\n", n, faculty(n));
+	printf("\n\n%d! = %d\n", n, (int)faculty(n));
 }
 
