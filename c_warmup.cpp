@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <math.h>
-
 #include <chrono>
 using namespace std::chrono;
 
@@ -15,7 +14,6 @@ int add(int x[], int y[]) {
 	}
 	return output;
 }
-
 
 
 bool single_prime(int n) {
@@ -48,12 +46,6 @@ void prime(double limit) {
 }
 
 
-
-
-
-
-
-
 long long faculty(int in) {
 	if (in == 1) {
 		return 1;
@@ -64,8 +56,6 @@ long long faculty(int in) {
 }
 
 
-
-
 int main()
 {
 	int x[] = { 1,2,3,4 };
@@ -73,7 +63,6 @@ int main()
 
 	int sum = add(x, y);
 	printf("%d%d%d%d + %d%d%d%d = %d\n", x[0], x[1], x[2], x[3], y[0], y[1], y[2], y[3], sum);
-
 
 	auto start = high_resolution_clock::now();
 
@@ -83,7 +72,6 @@ int main()
 	auto end = high_resolution_clock::now();
 	auto runtime = duration_cast<microseconds>(end - start);
 	printf("Found in %d microseconds\n\n", runtime);
-
 
 	int i = 0;
 	int prime_counter = 0;
@@ -103,9 +91,6 @@ int main()
 	}
 	printf("%d prime numbers have been found in one second\n", prime_counter);
 	
-
-
 	int n = 4;
 	printf("\n\n%d! = %d\n", n, (int)faculty(n));
 }
-
