@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <math.h>
 
+#include <chrono>
+using namespace std::chrono;
+
 
 int add(int x[], int y[]) {
 	int output = 0;
@@ -35,12 +38,18 @@ bool single_prime(int n) {
 
 
 void prime(double limit) {
-	for (int i = 1; i <= limit; i++) {
+	int counter = 0;
+	for (int i = 2; i <= limit; i++) {
 		if (single_prime(i)) {
-			printf("  -  %d\n",i);
+			counter++;
 		}
 	}
+	printf("# of prime numbers under %d: %d\n", (int)limit, counter);
 }
+
+
+
+
 
 
 
@@ -66,9 +75,34 @@ int main()
 	printf("%d%d%d%d + %d%d%d%d = %d\n", x[0], x[1], x[2], x[3], y[0], y[1], y[2], y[3], sum);
 
 
+	auto start = high_resolution_clock::now();
+
 	int limit = 100;
-	printf("\n\nPrime numbers below %d:\n", limit);
 	prime(limit);
+
+	auto end = high_resolution_clock::now();
+	auto runtime = duration_cast<microseconds>(end - start);
+	printf("Found in %d microseconds\n\n", runtime);
+
+
+	int i = 0;
+	int prime_counter = 0;
+	start  = high_resolution_clock::now();
+	auto curr = runtime;
+
+	while (true) {
+		if (single_prime(i)) {
+			prime_counter++;
+		}
+
+		curr = duration_cast<microseconds>(high_resolution_clock::now() - start);
+		if (curr.count() > 1000000) {
+			break;
+		}
+		i++;
+	}
+	printf("%d prime numbers have been found in one second\n", prime_counter);
+	
 
 
 	int n = 4;
